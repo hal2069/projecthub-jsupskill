@@ -1,12 +1,7 @@
 <template>
   <div class="wrapper">
     <app-header></app-header>
-    <app-home></app-home>
-    <app-all-projects></app-all-projects>
-    <app-project></app-project>
-    <app-new-project></app-new-project>
-    <app-new-item></app-new-item>
-    
+    <router-view></router-view>
   </div>
 </template>
 

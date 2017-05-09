@@ -5,8 +5,8 @@
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li href="/" class="tab active"><a>Główna</a></li>
-        <li href="/projects" class="tab"><a>Projekty</a></li>
+        <router-link to="/" tag="li" class="tab" active-class="active" exact><a>Główna</a></router-link>
+        <router-link to="/projects" tag="li" class="tab" active-class="active"><a>Projekty</a></router-link>
       </ul>
     </div>
   </nav>

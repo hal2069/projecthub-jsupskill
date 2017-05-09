@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "explorer.openEditors.visible": 0,
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 2.5,
     "editor.tabSize": 2,
     "javascript.validate.enable": false,
     "files.autoSave": "off",

@@ -29,7 +29,7 @@
     name: 'app',
     data () {
       return {
-        name: 'BMW',
+        name: this.$route.params.name,
         isEditing: false,
         editedItem: {},
         project: {}

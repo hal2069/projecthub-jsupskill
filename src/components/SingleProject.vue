@@ -2,7 +2,9 @@
   <li class="timeline-node">
     <div class="timeline-stamp">{{ createdOn }}</div>
     <div class="timeline-name">
-      <a href="/project/project_name">{{ project.name }}</a>
+     <!-- <router-link :to="'/project/' + project.name">{{ project.name }}</router-link>
+    -->
+      <a @click="navigateToProject">{{ project.name }}</a>
     </div>
   </li>
 </template>
@@ -16,6 +18,12 @@
           return new Date(this.project.date).toLocaleDateString('pl-PL')
         }
         return ''
+      }
+    },
+    methods: {
+      navigateToProject () {
+        // this.$router.push('/project/' + this.project.name)
+        this.$router.push({name: 'project', params: {name: this.project.name}, query: { a: 12 }})
       }
     }
   }
