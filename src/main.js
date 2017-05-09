@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import { routes } from './routes'
 import axios from 'axios'
+import { store } from './store/store'
 
 Vue.use(VueRouter)
 
@@ -33,5 +34,6 @@ export const eventBus = new Vue({})
 new Vue({ // eslint-disable-line no-new
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

@@ -16,10 +16,10 @@
   export default {
     methods: {
       increment () {
-
+        this.$store.dispatch('increment', {payload: 20, dec: 10})
       },
       decrement () {
-
+        this.$store.commit('decrement')
       }
     }
   }
