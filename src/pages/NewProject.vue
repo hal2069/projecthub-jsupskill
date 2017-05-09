@@ -10,6 +10,8 @@
       <button class="btn light-blue darken-3" type="submit">Dodaj</button>
     </form>
     <button class="btn light-blue darken-3 add-new-btn" href="/projects">Wróć</button>
+    <div style="height: 1000px"></div>
+    <p id="here">tutaj</p>
   </div>
 </template>
 
