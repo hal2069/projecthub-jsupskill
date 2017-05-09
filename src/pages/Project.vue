@@ -51,7 +51,16 @@
       EditItemModal
     },
     created () {
-      this.project = _.find(mock, {name: this.name})
+      this.$http.get(`/projects/${this.name}`)
+        .then((res) => {
+          this.project = res.data
+          console.log(res.data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    
+      // this.project = _.find(mock, {name: this.name})
 
       eventBus.$on('editEvent', (data) => {
         this.editedItem = data

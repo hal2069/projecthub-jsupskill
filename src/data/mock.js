@@ -15,7 +15,7 @@ export default [
         ]
       },
       {
-        _id: 815427182,
+        _id: 8154,
         date: new Date(2016, 5, 23),
         name: 'Faza input',
         description: 'BMW - sprint 1',

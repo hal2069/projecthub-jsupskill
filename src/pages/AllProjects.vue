@@ -27,7 +27,11 @@
       }
     },
     created () {
-      this.projects = mock
+      this.$http.get('/projects')
+        .then((res) => {
+          console.log(res)
+          this.projects = res.data
+        })
     },
     components: {
       SingleProject

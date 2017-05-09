@@ -18,6 +18,7 @@
 <script>
   import mock from '../data/mock'
   import _ from 'lodash'
+  import toastr from 'toastr'
 
   export default {
     data () {
@@ -30,12 +31,17 @@
     },
     methods: {
       submit () {
-        let id = Math.floor(Math.random() * 10000000)
-        const project = _.clone(this.newProject)
-        project['_id'] = id
-        mock.push(project)
-        this.newProject.name = ''
-        console.log('redirect to /projects')
+        this.$http.post('/projects', this.newProject)
+          .then((res) => {
+            console.log(res)
+            this.newProject.name = ''
+            this.newProject.name = ''
+            // this.$router.push(/'projects')
+            toastr.success('Udało się')
+          })
+          .catch((err) => {
+            console.log(err)
+          })
       }
     }
   }

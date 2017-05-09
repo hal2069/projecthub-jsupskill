@@ -2,6 +2,7 @@
   <div class="wrapper">
     <app-header></app-header>
     <router-view></router-view>
+    <router-view name="second"></router-view>
   </div>
 </template>
 
